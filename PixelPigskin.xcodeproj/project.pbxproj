@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00000000000000000000 /* AICoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000 /* AICoach.swift */; };
+		B00000000000000000001 /* AIGM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000001 /* AIGM.swift */; };
+		B00000000000000000002 /* FallbackAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000002 /* FallbackAI.swift */; };
+		B00000000000000000003 /* FrontOfficeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000003 /* FrontOfficeView.swift */; };
+		B00000000000000000004 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000004 /* MainMenuView.swift */; };
+		B00000000000000000005 /* PixelPigskinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000005 /* PixelPigskinApp.swift */; };
+		B00000000000000000006 /* SeasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000006 /* SeasonView.swift */; };
+		B00000000000000000007 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000007 /* Store.swift */; };
+		B00000000000000000008 /* TeamSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000008 /* TeamSelectView.swift */; };
+		B00000000000000000009 /* AIBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000009 /* AIBrain.swift */; };
+		B00000000000000000010 /* AIPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000010 /* AIPlayer.swift */; };
+		B00000000000000000011 /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000011 /* BallNode.swift */; };
+		B00000000000000000012 /* GameKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000012 /* GameKit.swift */; };
+		B00000000000000000013 /* GameScene+Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000013 /* GameScene+Flow.swift */; };
+		B00000000000000000014 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000014 /* GameScene.swift */; };
+		B00000000000000000015 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000015 /* GameView.swift */; };
+		B00000000000000000016 /* PixelArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000016 /* PixelArt.swift */; };
+		B00000000000000000017 /* Playbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000017 /* Playbook.swift */; };
+		B00000000000000000018 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000018 /* PlayerNode.swift */; };
+		B00000000000000000019 /* SoundFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000019 /* SoundFX.swift */; };
+		B00000000000000000020 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000020 /* Season.swift */; };
+		B00000000000000000021 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000021 /* Team.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		R00000000000000000001 /* PixelPigskin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelPigskin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00000000000000000000 /* AICoach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/AI/AICoach.swift"; sourceTree = "<group>"; };
+		F00000000000000000001 /* AIGM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/AI/AIGM.swift"; sourceTree = "<group>"; };
+		F00000000000000000002 /* FallbackAI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/AI/FallbackAI.swift"; sourceTree = "<group>"; };
+		F00000000000000000003 /* FrontOfficeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/App/FrontOfficeView.swift"; sourceTree = "<group>"; };
+		F00000000000000000004 /* MainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/App/MainMenuView.swift"; sourceTree = "<group>"; };
+		F00000000000000000005 /* PixelPigskinApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/App/PixelPigskinApp.swift"; sourceTree = "<group>"; };
+		F00000000000000000006 /* SeasonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/App/SeasonView.swift"; sourceTree = "<group>"; };
+		F00000000000000000007 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/App/Store.swift"; sourceTree = "<group>"; };
+		F00000000000000000008 /* TeamSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/App/TeamSelectView.swift"; sourceTree = "<group>"; };
+		F00000000000000000009 /* AIBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/AIBrain.swift"; sourceTree = "<group>"; };
+		F00000000000000000010 /* AIPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/AIPlayer.swift"; sourceTree = "<group>"; };
+		F00000000000000000011 /* BallNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/BallNode.swift"; sourceTree = "<group>"; };
+		F00000000000000000012 /* GameKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/GameKit.swift"; sourceTree = "<group>"; };
+		F00000000000000000013 /* GameScene+Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/GameScene+Flow.swift"; sourceTree = "<group>"; };
+		F00000000000000000014 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/GameScene.swift"; sourceTree = "<group>"; };
+		F00000000000000000015 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/GameView.swift"; sourceTree = "<group>"; };
+		F00000000000000000016 /* PixelArt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/PixelArt.swift"; sourceTree = "<group>"; };
+		F00000000000000000017 /* Playbook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/Playbook.swift"; sourceTree = "<group>"; };
+		F00000000000000000018 /* PlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/PlayerNode.swift"; sourceTree = "<group>"; };
+		F00000000000000000019 /* SoundFX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Game/SoundFX.swift"; sourceTree = "<group>"; };
+		F00000000000000000020 /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Models/Season.swift"; sourceTree = "<group>"; };
+		F00000000000000000021 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PixelPigskin/Models/Team.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		H00000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G00000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G00000000000000000003 /* PixelPigskin */,
+				G00000000000000000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G00000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				R00000000000000000001 /* PixelPigskin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G00000000000000000003 /* PixelPigskin */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000 /* AICoach.swift */,
+				F00000000000000000001 /* AIGM.swift */,
+				F00000000000000000002 /* FallbackAI.swift */,
+				F00000000000000000003 /* FrontOfficeView.swift */,
+				F00000000000000000004 /* MainMenuView.swift */,
+				F00000000000000000005 /* PixelPigskinApp.swift */,
+				F00000000000000000006 /* SeasonView.swift */,
+				F00000000000000000007 /* Store.swift */,
+				F00000000000000000008 /* TeamSelectView.swift */,
+				F00000000000000000009 /* AIBrain.swift */,
+				F00000000000000000010 /* AIPlayer.swift */,
+				F00000000000000000011 /* BallNode.swift */,
+				F00000000000000000012 /* GameKit.swift */,
+				F00000000000000000013 /* GameScene+Flow.swift */,
+				F00000000000000000014 /* GameScene.swift */,
+				F00000000000000000015 /* GameView.swift */,
+				F00000000000000000016 /* PixelArt.swift */,
+				F00000000000000000017 /* Playbook.swift */,
+				F00000000000000000018 /* PlayerNode.swift */,
+				F00000000000000000019 /* SoundFX.swift */,
+				F00000000000000000020 /* Season.swift */,
+				F00000000000000000021 /* Team.swift */,
+			);
+			path = PixelPigskin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T00000000000000000001 /* PixelPigskin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00000000000000000002 /* Build configuration list for PBXNativeTarget "PixelPigskin" */;
+			buildPhases = (
+				H00000000000000000001 /* Sources */,
+				H00000000000000000002 /* Frameworks */,
+				H00000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixelPigskin;
+			productName = PixelPigskin;
+			productReference = R00000000000000000001 /* PixelPigskin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P00000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1700;
+				LastUpgradeCheck = 1700;
+			};
+			buildConfigurationList = C00000000000000000001 /* Build configuration list for PBXProject "PixelPigskin" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G00000000000000000001;
+			productRefGroup = G00000000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T00000000000000000001 /* PixelPigskin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		H00000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		H00000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00000000000000000000 /* AICoach.swift in Sources */,
+				B00000000000000000001 /* AIGM.swift in Sources */,
+				B00000000000000000002 /* FallbackAI.swift in Sources */,
+				B00000000000000000003 /* FrontOfficeView.swift in Sources */,
+				B00000000000000000004 /* MainMenuView.swift in Sources */,
+				B00000000000000000005 /* PixelPigskinApp.swift in Sources */,
+				B00000000000000000006 /* SeasonView.swift in Sources */,
+				B00000000000000000007 /* Store.swift in Sources */,
+				B00000000000000000008 /* TeamSelectView.swift in Sources */,
+				B00000000000000000009 /* AIBrain.swift in Sources */,
+				B00000000000000000010 /* AIPlayer.swift in Sources */,
+				B00000000000000000011 /* BallNode.swift in Sources */,
+				B00000000000000000012 /* GameKit.swift in Sources */,
+				B00000000000000000013 /* GameScene+Flow.swift in Sources */,
+				B00000000000000000014 /* GameScene.swift in Sources */,
+				B00000000000000000015 /* GameView.swift in Sources */,
+				B00000000000000000016 /* PixelArt.swift in Sources */,
+				B00000000000000000017 /* Playbook.swift in Sources */,
+				B00000000000000000018 /* PlayerNode.swift in Sources */,
+				B00000000000000000019 /* SoundFX.swift in Sources */,
+				B00000000000000000020 /* Season.swift in Sources */,
+				B00000000000000000021 /* Team.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C00000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				SDKROOT = iphoneos;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		C00000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				SDKROOT = iphoneos;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C00000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PixelPigskin;
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixelpigskin.game;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C00000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PixelPigskin;
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixelpigskin.game;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C00000000000000000001 /* Build configuration list for PBXProject "PixelPigskin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00000000000000000003 /* Debug */,
+				C00000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00000000000000000002 /* Build configuration list for PBXNativeTarget "PixelPigskin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00000000000000000005 /* Debug */,
+				C00000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = P00000000000000000001 /* Project object */;
+}
