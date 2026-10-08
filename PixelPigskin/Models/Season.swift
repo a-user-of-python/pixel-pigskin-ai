@@ -105,9 +105,10 @@ final class Season {
         for g in all where g.played {
             if g.homeScore > g.awayScore {
                 map[g.homeId]?.wins += 1; map[g.awayId]?.losses += 1
-            } else {
+            } else if g.awayScore > g.homeScore {
                 map[g.awayId]?.wins += 1; map[g.homeId]?.losses += 1
             }
+            // Ties: no win/loss recorded (rare).
         }
         return map.values.sorted {
             if $0.wins != $1.wins { return $0.wins > $1.wins }
@@ -187,9 +188,10 @@ final class Season {
         playoffBracket[index].awayScore = awayScore
         playoffBracket[index].played = true
         if playoffBracket.count == 2 && playoffBracket.allSatisfy({ $0.played }) {
-            let w1 = playoffBracket[0].homeScore > playoffBracket[0].awayScore
+            // Tiebreak: home team advances on a tie (no overtime in arcade mode).
+            let w1 = playoffBracket[0].homeScore >= playoffBracket[0].awayScore
                 ? playoffBracket[0].homeId : playoffBracket[0].awayId
-            let w2 = playoffBracket[1].homeScore > playoffBracket[1].awayScore
+            let w2 = playoffBracket[1].homeScore >= playoffBracket[1].awayScore
                 ? playoffBracket[1].homeId : playoffBracket[1].awayId
             playoffBracket.append(GameResult(week: 101, homeId: w1, awayId: w2,
                                              homeScore: 0, awayScore: 0, played: false))
@@ -197,7 +199,7 @@ final class Season {
         }
         if playoffBracket.count == 3 && playoffBracket[2].played {
             let g = playoffBracket[2]
-            championId = g.homeScore > g.awayScore ? g.homeId : g.awayId
+            championId = g.homeScore >= g.awayScore ? g.homeId : g.awayId
             return championId
         }
         return nil

@@ -219,12 +219,14 @@ final class GameScene: SKScene {
         }
 
         // AI coach suggestion (async, on-device LLM or fallback).
+        // Guard: only show if the user is still on the play-select screen.
         Task { [weak self] in
             guard let self else { return }
             let s = await AICoach.shared.suggest(
                 down: state.down, distance: state.distance, yardLine: state.yardLine,
                 quarter: state.quarter, clock: state.clockSeconds, scoreDiff: state.scoreDiff)
             await MainActor.run {
+                guard self.phase == .playSelect else { return }
                 let badge = s.2 ? "🤖" : "📋"
                 self.coachLabel.text = "\(badge) Coach: \(s.0) — \(s.1)"
             }
@@ -380,8 +382,17 @@ final class GameScene: SKScene {
         state.tickClock(0)
     }
 
+    private var lastUpdateTime: TimeInterval = 0
+
     override func update(_ currentTime: TimeInterval) {
-        let dt = CGFloat(1.0 / 60.0) // fixed step keeps steering stable
+        // Real delta time (clamped) so the game runs at full speed on 120Hz displays.
+        let dt: CGFloat
+        if lastUpdateTime == 0 {
+            dt = CGFloat(1.0 / 60.0)
+        } else {
+            dt = min(CGFloat(currentTime - lastUpdateTime), CGFloat(1.0 / 30.0))
+        }
+        lastUpdateTime = currentTime
 
         switch phase {
         case .preSnap:

@@ -98,7 +98,9 @@ final class AIBrain {
                     try await Task.sleep(nanoseconds: 2_500_000_000)
                     return FallbackAI.decide(input)
                 }
-                let first = try await group.next()!
+                guard let first = try await group.next() else {
+                    return FallbackAI.decide(input)
+                }
                 group.cancelAll()
                 return first
             }

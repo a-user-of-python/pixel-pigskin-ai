@@ -46,7 +46,12 @@ final class AICoach {
                                                        clock: clock, scoreDiff: scoreDiff)
                     return (p, r, false)
                 }
-                let first = try await group.next()!
+                guard let first = try await group.next() else {
+                    let (p, r) = FallbackAI.suggestPlay(down: down, distance: distance,
+                                                       yardLine: yardLine, quarter: quarter,
+                                                       clock: clock, scoreDiff: scoreDiff)
+                    return (p, r, false)
+                }
                 group.cancelAll()
                 return first
             }

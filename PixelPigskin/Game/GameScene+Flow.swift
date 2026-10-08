@@ -264,7 +264,7 @@ extension GameScene {
     }
 
     private func onTouchdown() {
-        if state.playerPossession { state.playerScore += 6 } else { state.playerScore += 6 }
+        if state.playerPossession { state.playerScore += 6 } else { state.opponentScore += 6 }
         SoundFX.shared.play(.touchdown)
         showMessage("TOUCHDOWN!")
         if state.playerPossession { moraleHit(td: true) }

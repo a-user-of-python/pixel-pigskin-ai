@@ -57,7 +57,7 @@ final class AIGM {
                     try await Task.sleep(nanoseconds: 2_500_000_000)
                     return ruleDetail
                 }
-                let first = try await group.next()!
+                guard let first = try await group.next() else { return ruleDetail }
                 group.cancelAll()
                 return first
             }

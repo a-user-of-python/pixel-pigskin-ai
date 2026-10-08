@@ -20,10 +20,15 @@ enum AIPlayer {
                               ballFlyingTo: CGPoint?,
                               decision: AIDecision,
                               dt: CGFloat) {
-        guard defenders.count >= 11 else { return }
-        let dline = Array(defenders[0..<4])     // rushers
-        let lbs = Array(defenders[4..<7])
-        let dbs = Array(defenders[7..<11])
+        // Split available defenders into DL/LB/DB proportionally (injuries may thin the ranks).
+        let n = defenders.count
+        guard n > 0 else { return }
+        let nDL = min(4, n)
+        let nLB = min(3, max(0, n - nDL))
+        let nDB = max(0, n - nDL - nLB)
+        let dline = Array(defenders[0..<nDL])
+        let lbs = Array(defenders[nDL..<(nDL + nLB)])
+        let dbs = Array(defenders[(nDL + nLB)..<n])
 
         // --- Defensive line: rush the QB (or the ball), shed blocks ---
         for (i, r) in dline.enumerated() {
@@ -130,16 +135,13 @@ enum AIPlayer {
 
     /// Simple AI quarterback for when the opponent has the ball (or AUTO).
     /// Returns true when it decided to throw (scene performs the throw).
+    /// Called once when aiThrowTimer expires — always throws (picks best receiver).
     static func updateAIQuarterback(qb: PlayerNode, receivers: [PlayerNode],
                                     defenders: [PlayerNode],
                                     timeSinceSnap: Double,
                                     decideThrow: (PlayerNode) -> Void) {
-        // Hold, then pick the most open receiver and throw.
-        guard timeSinceSnap > Double.random(in: 1.2...2.6) else {
-            // Drift in the pocket.
-            qb.moveTarget = qb.position + CGPoint(x: -10, y: sin(timeSinceSnap * 2) * 20)
-            return
-        }
+        // Pick the most open receiver and throw immediately.
+        // (Timing is controlled by the caller's aiThrowTimer; don't gate here.)
         var best: PlayerNode?
         var bestScore: CGFloat = -1
         for r in receivers {

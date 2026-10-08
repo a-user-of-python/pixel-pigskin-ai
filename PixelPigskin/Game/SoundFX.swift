@@ -41,7 +41,7 @@ final class SoundFX {
         case .firstDown:    seq = [(587, 0.08, .square), (880, 0.12, .square)]
         }
         for (freq, dur, wave) in seq {
-            let buf = makeTone(freq: freq, dur: dur, wave: wave)
+            guard let buf = makeTone(freq: freq, dur: dur, wave: wave) else { continue }
             player.scheduleBuffer(buf, options: [])
         }
         if !player.isPlaying { player.play() }
@@ -49,12 +49,13 @@ final class SoundFX {
 
     private enum Wave { case square, triangle, noise }
 
-    private func makeTone(freq: Float, dur: Float, wave: Wave) -> AVAudioPCMBuffer {
-        let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1)!
+    private func makeTone(freq: Float, dur: Float, wave: Wave) -> AVAudioPCMBuffer? {
+        guard let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1),
+              let buf = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: AVAudioFrameCount(sampleRate * Double(dur))),
+              let ch = buf.floatChannelData else { return nil }
         let frames = AVAudioFrameCount(sampleRate * Double(dur))
-        let buf = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frames)!
         buf.frameLength = frames
-        let ch = buf.floatChannelData![0]
+        let c = ch[0]
         for i in 0..<Int(frames) {
             let t = Float(i) / Float(sampleRate)
             let phase = 2 * Float.pi * freq * t
@@ -66,7 +67,7 @@ final class SoundFX {
             }
             // Simple decay envelope so it sounds chiptune, not harsh.
             let env = 1 - Float(i) / Float(frames)
-            ch[i] = s * env * 0.35
+            c[i] = s * env * 0.35
         }
         return buf
     }
